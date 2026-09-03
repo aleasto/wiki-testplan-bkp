@@ -1,0 +1,74 @@
+Below are the test cases that should be run when evolution is updated to new major releases in the development version of Ubuntu. These should also be run for all evolution Stable Release Updates.
+
+== Pre-requisites ==
+
+ 1. Install the update
+ 1. Log out and log back in (or restart)
+ 1. If not done already, in the Settings application navigate to "Online Accounts" and add a Google account.
+   1. Ensure to enable both "Mail", "Calendar" and "Contacts" syncing.
+
+== Contacts Test Case ==
+ 1. Open Evolution.
+ 1. From the bottom-left menu select "Contacts".
+ 1. From the top-left navigation panel select "Address Book" under your Google account.
+ 1. Verify that you can see your Google contacts, if any.
+ 1. From the top-left click "New" to create a new contact.
+ 1. Fill-in the "Full Name..." field as "John Smith".
+ 1. Fill-in the "Work Email" field as "john.smith@example.com".
+ 1. Click "Save".
+ 1. Verify that the new contact is visible.
+
+== Email Test Case ==
+
+ 1. Open Evolution.
+ 1. From the bottom-left menu select "Mail".
+ 1. From the top-left navigation panel select "Inbox" under your Google account.
+ 1. Verify that you can receive and view HTML emails.
+ 1. From the top-left click "New" to send a new email.
+ 1. In the "To:" field type "John Smith" (added as a contact in the Contacts Test Case)
+ 1. Verify that the email address is picked up from your contacts.
+ 1. Replace the "To:" address with another email address that you own.
+ 1. Click "Send".
+ 1. Verify that you have sent and received the email.
+
+== Calendar Test Case ==
+ 1. Open Evolution.
+ 1. From the bottom-left menu select "Calendar".
+ 1. Verify that events from your Google calendar are present, if any.
+ 1. From the top-left click "New" to create a new event.
+ 1. From the "Calendar:" drop-down select a calendar synchronized with your Google account.
+ 1. Fill-in a Summary and Date-Time
+ 1. Click "Save and Close".
+ 1. Verify that the event is visible in Evolution.
+ 1. Verify that the event is visible in Google Calendar (web app or mobile application)
+ 1. In Evolution right-click on the event and "Delete" it.
+ 1. Verify that the event is no longer visible in Evolution.
+ 1. Verify that the event is no longer visible in Google Calendar (web app or mobile application)
+
+
+== RSS Feed Test Case ==
+ 1. Open Evolution
+ 1. Click on the hamburger menu and navigate to Edit > Preferences.
+ 1. Verify that you see a "News and Blogs" tab in the sidebar.
+ 1. Click "News and Blogs".
+ 1. Click "Add".
+ 1. Insert a Feed URL, for example:
+   * https://distrowatch.com/news/distro/ubuntu.xml
+ 1. Click "Fetch" and verify that the "Name" field is automatically populated.
+ 1. Click "Save".
+ 1. Close the Preferences window.
+ 1. Back in the main window, from the bottom-left menu select "Mail".
+ 1. Verify that in the sidebar you see a "News and Blogs" section, with your newly added RSS feed.
+
+== What Could Go Wrong ==
+Evolution is included by default in Ubuntu MATE
+
+If there are bugs in Evolution, Thunderbird could be used instead.
+
+Evolution is part of the GNOME micro release exceptions:
+
+https://wiki.ubuntu.com/StableReleaseUpdates/GNOME
+
+Test plan approved by RAOF for the SRU team (2024/07/24)
+----
+CategoryDesktopTestPlans
